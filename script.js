@@ -117,18 +117,18 @@ function questao6() {
    }
 }
 
-/*switch (codUser) {
-   case value: 1
+/*
+  
+switch (codUser) {
+   case 1:
    document.write(`${num1} + ${num2} = ${Number(num1 + num2)}`);
       break;
-   case value: 2
+   case 2:
    document.write(`${num1} * ${num2} = ${Number(num1 * num2)}`);
       break;
-   case value: 3
+   case 3:
    document.write(`${num1} dividido por ${num2} = ${Number(num1 / num2)}`);
       break;
-   default: 
-   document.write("Código inválido. Tente novamente.");
-      break;
+   
 }
-}
+}*/
