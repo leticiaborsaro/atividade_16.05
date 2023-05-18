@@ -7,7 +7,7 @@
     var n2 = parseInt(window.prompt("Insira outro número inteiro:"));
     var n3 = parseInt(window.prompt("Insira mais um número:"));
 
-    document.write('1) A média é ', Math.floor((n1 + n2 + n3)/3));
+    document.write(`1) A média é ${Math.floor((n1 + n2 + n3)/3)}`);
    }
 
 // Questão 2
@@ -19,7 +19,7 @@
     var aumentosal = Number(sal/10);
     var novosal = Number(aumentosal + sal);
 
-    document.write('2) ', nome,', seu novo salário é ', novosal);
+    document.write(`2) ${nome}, seu novo salário é ${novosal}`);
    }
 
 // Questão 3
@@ -29,15 +29,21 @@
     var Bvalor = Number(window.prompt('Insira um número inteiro:'));
 
     if (Avalor == Bvalor) {
-      document.write('3) ', Number(Avalor + Bvalor), ' é a soma dos dois números');
+      document.write(`3) ${Number(Avalor + Bvalor)} é a soma dos dois números`);
     } 
     else {
       var Cvalor = Number(Avalor * Bvalor);
-      document.write('3) A multiplicação do primeiro número com o segundo é igual a ', Cvalor);
+      document.write(`3) A multiplicação do primeiro número com o segundo é igual a ${Cvalor}`);
     }
    }
 
   // Questão 4
+  // Correção: poderia usar legenda p/ colocar se é a vista, se é 3 parcelas ou 5 parcelas
+  /* 
+  if(forma_pagamento == '2')
+  valor_parcela = preco_a_vista + (preco_a_vista*10)/100
+  window.alert()
+  */
 
   function questao4() {
    var precVista = Number(window.prompt("Insira o valor à vista:"));
@@ -48,7 +54,7 @@
     if (parcelVezes == 3) {
      precTotal = precVista + (precVista/10) // preço total é igual a preço à vista + 10%
      prestMensal = Math.round(precTotal/parcelVezes) // prestação mensal = a preço à vista dividido por 3
-     document.write('4) O valor ', precVista, ', parcelado em ', parcelVezes, ' vezes, resultará em parcelas de ', prestMensal, ', resultando em um total de ', precTotal, ' (Com um acréscimo de 10% no total)');
+     document.write(`4) O valor ${precVista} parcelado em ${parcelVezes} vezes, resultará em parcelas de ${prestMensal}, resultando em um total de ${precTotal} (Com um acréscimo de 10%)`);
 
     }
 
@@ -56,7 +62,7 @@
       
       precTotal = precVista + (precVista/10 * 2) // preço total é igual a preço à vista + 20%
       prestMensal = Math.round(precTotal/parcelVezes) //prestação mensal = a preço à vista dividido por 5
-      document.write('4) O valor ', precVista, ', parcelado em ', parcelVezes, ' vezes, resultará em parcelas de ', prestMensal, ', resultando em um total de ', precTotal, ' (Com um acréscimo de 20% no total)');
+      document.write(`4) O valor ${precVista}, parcelado em ${parcelVezes} vezes, resultará em parcelas de ${prestMensal} resultando em um total de ${precTotal} (Com um acréscimo de 20%)`);
     }
 
     else {
@@ -79,10 +85,10 @@
    var media = Number(Math.round((nota1 + nota2 + nota3)/3));
 
    if (media >= 8 && media <= 10) {
-    document.write('5) ', nomeAluno,', sua média foi de ', media, '. Você foi aprovado!'); 
+    document.write(`5) ${nomeAluno}, sua média foi de ${media}. Você foi aprovado!`); 
    }
    else if (media < 8) {
-    document.write('5) ',nomeAluno,', sua média foi de ', media, '. Você foi reprovado.');
+    document.write(`5) ${nomeAluno}, sua média foi de ${media}. Você foi reprovado.`);
    }
    else if (media > 10) {
     document.write('Informação inválida. Tente novamente.');
@@ -97,16 +103,32 @@ function questao6() {
    var codUser = window.prompt("Insira o código de seleção do usuário");
 
    if (codUser == 1) {
-      document.write(num1, " + ", num2, " = ", Number(num1 + num2));
+      document.write(`${num1} + ${num2} = ${Number(num1 + num2)}`);
    }
    else if (codUser == 2) {
-      document.write(num1, " * ", num2, " = ", Number(num1 * num2));
+      document.write(`${num1} * ${num2} = ${Number(num1 * num2)}`);
 
    }
    else if (codUser == 3) {
-      document.write(num1, " dividido por ", num2, " = ", Number(num1 / num2));
+      document.write(`${num1} dividido por ${num2} = ${Number(num1 / num2)}`);
    }
    else {
       document.write("Código inválido. Tente novamente.");
    }
+}
+
+/*switch (codUser) {
+   case value: 1
+   document.write(`${num1} + ${num2} = ${Number(num1 + num2)}`);
+      break;
+   case value: 2
+   document.write(`${num1} * ${num2} = ${Number(num1 * num2)}`);
+      break;
+   case value: 3
+   document.write(`${num1} dividido por ${num2} = ${Number(num1 / num2)}`);
+      break;
+   default: 
+   document.write("Código inválido. Tente novamente.");
+      break;
+}
 }
